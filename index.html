@@ -9,9 +9,12 @@
 
     <p>{{name}}</p>
 
-    <div ng-repeat= "friend in friends">
+    <div ng-repeat= "friend in friends track by $index">
       <p>{{friend}}</p>
     </div>
+
+    <input ng-model= "newFri"/>
+    <button ng-click = "addFriend(newFri)">add Friend</button>
 
 
   <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
